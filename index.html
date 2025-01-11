@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
@@ -12,34 +12,49 @@
       href="./images/favicon-32x32.png"
     />
 
-    <!-- Stylesheet links -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
 
-    <title>Frontend Mentor | NFT preview card component</title>
+    <title>NFT Preview Card Component | Frontend Mentor Challenge</title>
   </head>
   <body>
-    <div class="container">
-      <article class="main-image">
-        <img src="./images/image-equilibrium.jpg" alt="" />
-        <div>
-          <img src="./images/icon-view.svg" alt="" />
+    <main class="container">
+      <!-- NFT Preview Image Section -->
+      <section class="main-image" aria-labelledby="nft-title">
+        <img
+          src="./images/image-equilibrium.jpg"
+          alt="Preview of NFT Equilibrium #3429"
+        />
+        <div class="overlay">
+          <img src="./images/icon-view.svg" alt="View icon overlay" />
         </div>
-      </article>
+      </section>
 
-      <article>
-        <h2>Equilibrium #3429</h2>
+      <!-- NFT Information Section -->
+      <section>
+        <h2 id="nft-title">Equilibrium #3429</h2>
         <p>Our Equilibrium collection promotes balance and calm.</p>
 
         <ul>
-          <li><img src="./images/icon-ethereum.svg" alt="" /> 0.041 ETH</li>
-          <li><img src="./images/icon-clock.svg" alt="" /> 3 days left</li>
+          <li>
+            <img src="./images/icon-ethereum.svg" alt="Ethereum icon" />
+            <span>0.041 ETH</span>
+          </li>
+          <li>
+            <img src="./images/icon-clock.svg" alt="Clock icon" />
+            <span>3 days left</span>
+          </li>
         </ul>
-      </article>
+      </section>
 
-      <article class="avatar">
-        <img src="./images/image-avatar.png" alt="" />
+      <!-- Creator Information Section -->
+      <section class="avatar">
+        <img
+          src="./images/image-avatar.png"
+          alt="Creator's avatar: Jules Wyvern"
+        />
         <p>Creation of <span>Jules Wyvern</span></p>
-      </article>
-    </div>
+      </section>
+    </main>
   </body>
 </html>
