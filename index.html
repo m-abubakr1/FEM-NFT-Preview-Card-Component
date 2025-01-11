@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <!-- Stylesheet links -->
-   <link rel="stylesheet" href="style.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <title>Frontend Mentor | NFT preview card component</title>
+    <!-- Stylesheet links -->
+    <link rel="stylesheet" href="style.css" />
 
-  
-</head>
-<body>
+    <title>Frontend Mentor | NFT preview card component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="desc-info">
+        <img src="images/image-equilibrium.jpg" alt="equilibrium" />
+        <img src="images/icon-view.svg" class="overlay" />
+        <h2>Equilibrium #3429</h2>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+      </div>
 
-  Equilibrium #3429
+      <div class="values">
+        <a href="#"
+          ><img src="images/icon-ethereum.svg" alt="ethereum-icon" /><span
+            >0.041 ETH</span
+          ></a
+        >
+        <a href="#"
+          ><img src="images/icon-clock.svg" alt="etherum-clock-icon" />
+          <p>3 days left</p></a
+        >
+      </div>
 
-  Our Equilibrium collection promotes balance and calm.
+      <hr />
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-</body>
+      <div class="creator">
+        <img src="images/image-avatar.png" alt="jules-wyvren" />
+        <p>Creation of <span>Jules Wyvern</span></p>
+      </div>
+    </div>
+  </body>
 </html>
