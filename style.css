@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "outfit", sans-serif;
+}
+
+body {
+  background: hsl(217, 54%, 11%);
+  color: hsl(0, 0%, 100%);
+}
+
+a {
+  color: hsl(215, 51%, 70%);
+  text-decoration: none;
+}
+
+.container {
+  margin: auto;
+  max-width: 300px;
+  background: hsl(216, 50%, 16%);
+  margin-top: 150px;
+  padding: 10px 10px 25px 10px;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px hsl(214, 68%, 9%);
+}
+
+.desc-info {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.overlay:hover {
+  opacity: 1;
+  background: hsl(178, 100%, 50%, 0.5);
+}
+
+.desc-info img {
+  width: 260px;
+  margin: 10px 0 10px 10px;
+  border-radius: 8px;
+}
+
+.desc-info h2 {
+  margin: 8px 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.desc-info p {
+  margin: 8px 10px;
+  font-size: 16px;
+  font-weight: 300;
+  color: hsl(215, 51%, 70%);
+}
+
+.values {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 10px;
+}
+
+.values a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.values a img {
+  margin-right: 4px;
+}
+
+.values span {
+  color: hsl(178, 100%, 50%);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.values p {
+  font-size: 14px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: hsl(215, 32%, 27%);
+  margin: 15px 10px 15px 10px;
+}
+
+.creator {
+  display: flex;
+  align-items: center;
+}
+
+.creator img {
+  width: 27px;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 100%);
+  margin: 0 10px;
+}
+
+.creator p {
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(215, 51%, 70%);
+}
+
+.creator span {
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+  margin-top: 10px;
+  text-align: center;
+}
