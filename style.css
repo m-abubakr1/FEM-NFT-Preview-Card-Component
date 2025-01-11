@@ -131,13 +131,13 @@ body {
   width: 2rem;
 }
 
-h2 {
+h1 {
   color: var(--white);
   margin: 1rem 0;
   transition: color 0.3s;
 }
 
-h2:hover {
+h1:hover {
   color: var(--cyan);
   cursor: pointer;
 }
