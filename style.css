@@ -1,144 +1,203 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessibility: Focus States for Keyboard Navigation */
+a,
+button,
+input,
+select,
+textarea {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: var(--focus-outline);
+  border-radius: 0.25rem;
+}
+
+/* Variables */
 :root {
   --soft-blue: hsl(215, 51%, 70%);
   --cyan: hsl(178, 100%, 50%);
-
-  /* ### Neutral */
 
   --main-bg: hsl(217, 54%, 11%);
   --card-bg: hsl(216, 50%, 16%);
   --line: hsl(215, 32%, 27%);
   --white: hsl(0, 0%, 100%);
+
+  --focus-outline: 2px solid var(--cyan);
 }
 
-img {
-  max-width: 100%;
-}
-
-ul {
-  list-style-type: none;
-}
-
-p {
-  font-weight: 300;
-}
-
+/* Body Styling */
 body {
   font-family: "Outfit", sans-serif;
   font-size: 18px;
   background-color: var(--main-bg);
-  color: hsl(0, 0%, 100%, 60%);
+  color: var(--soft-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1.25rem;
 }
 
 .container {
-  padding: 1.25rem;
   background-color: var(--card-bg);
   border-radius: 0.5rem;
-  margin-bottom: 1rem;
+  padding: 1.25rem;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-.container .main-image {
+.main-image {
   position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 
-.container .main-image div {
+.main-image img {
+  display: block;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.main-image div {
   position: absolute;
   top: 0;
-  background-color: hsl(178, 100%, 50%, 60%);
+  left: 0;
   width: 100%;
-  height: calc(100% - 4px);
-  z-index: 999;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.6);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container .main-image div:hover {
+.main-image:hover div {
   opacity: 1;
   cursor: pointer;
 }
 
-.container .main-image div img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.main-image div img {
+  width: 2rem;
 }
 
-.container h2 {
+h2 {
   color: var(--white);
-  margin: 1rem 0.5rem 0.5rem 0;
+  margin: 1rem 0;
+  transition: color 0.3s;
 }
 
-.container h2:hover {
+h2:hover {
   color: var(--cyan);
   cursor: pointer;
 }
 
-.container ul {
+ul {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   border-bottom: 1px solid var(--line);
 }
 
-.container ul li {
+ul li {
   display: flex;
   align-items: center;
 }
 
-.container ul li:first-child {
+ul li:first-child {
   color: var(--cyan);
 }
 
-.container ul li img {
+ul li img {
   margin-right: 0.5rem;
 }
 
-.container .avatar {
+.avatar {
   display: flex;
   align-items: center;
-  justify-content: start;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
-.container .avatar img {
+.avatar img {
   width: 3.5rem;
   border: 2px solid var(--white);
   border-radius: 50%;
   margin-right: 1rem;
 }
 
-.container .avatar p span {
+.avatar p span {
   color: var(--white);
   font-weight: 400;
 }
 
-.container .avatar p span:hover {
+.avatar p span:hover {
   color: var(--cyan);
   cursor: pointer;
 }
 
+/* Attribution Styling */
 .attribution {
-  font-size: 16px;
   text-align: center;
+  font-size: 0.875rem;
+  margin-top: 1rem;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--soft-blue);
+  text-decoration: none;
 }
 
-@media (min-width: 500px) {
-  .container {
-    width: 450px;
-    margin: 0 auto 1rem;
-  }
+.attribution a:hover {
+  color: var(--cyan);
+  text-decoration: underline;
 }
