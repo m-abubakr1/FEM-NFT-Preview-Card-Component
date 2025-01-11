@@ -89,7 +89,7 @@ body {
 
 .container {
   background-color: var(--card-bg);
-  border-radius: 1.7rem;
+  border-radius: 1rem;
   padding-inline: 1.5rem;
   padding-block: 1.25rem;
   width: 100%;
