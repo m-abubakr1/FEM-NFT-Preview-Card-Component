@@ -39,12 +39,6 @@ select {
   font: inherit;
 }
 
-body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
 
 /* Accessibility: Focus States for Keyboard Navigation */
 a,
@@ -77,6 +71,10 @@ input:focus-visible {
 
 /* Body Styling */
 body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   font-family: "Outfit", sans-serif;
   font-size: 18px;
   background-color: var(--main-bg);
